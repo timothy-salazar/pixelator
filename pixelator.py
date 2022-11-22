@@ -132,7 +132,12 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-    image = Image.open(args.infile)
+    # if the user provides a file path, we use it. Otherwise we assume we're
+    # going to get the file through stdin
+    if args.file:
+        image = Image.open(args.file)
+    else:
+        image = Image.open(args.infile)
     image = resize_img(
         image,
         width=args.width,
