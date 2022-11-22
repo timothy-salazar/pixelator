@@ -7,7 +7,7 @@ import sys
 import argparse
 from PIL import Image
 import numpy as np
-from print_dogs import array_to_blocks
+from ansi_image import array_to_blocks
 
 def resize_img(
         img: Image,
