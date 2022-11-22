@@ -76,6 +76,15 @@ if __name__ == "__main__":
         nargs='?',
         type=argparse.FileType('r'),
         default=sys.stdin.buffer)
+    parser.add_argument(
+        '-f',
+        '--file',
+        type=str,
+        help='''
+        A valid path to an image file that you'd like to see displayed on your
+        terminal.
+        '''
+    )
     group = parser.add_mutually_exclusive_group()
     group.add_argument(
         '-w',
