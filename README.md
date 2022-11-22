@@ -13,7 +13,9 @@ You can just point pixelator.py at your favorite dog image using the -f or --fil
 ## Streaming an image using Unix pipe
 pixelator.py will also accept input from stdin, which means you can pass the image through a Unix pipe:
 ![using a Unis pipe to pass an image](./images/pipe_usage.png)
+
 This is obviously very powerful, since it makes it easy to access dogs on the internet!!!
+
 ![using an API to access internet dogs](./images/pipe_usage2.png)
 ```
 DOG_URL=$(curl -s https://dog.ceo/api/breeds/image/random | jq -r '.message')
